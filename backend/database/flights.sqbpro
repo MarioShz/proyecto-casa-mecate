@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="flights.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2021"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="aerolineas" custom_title="0" dock_id="3" table="4,10:mainaerolineas"/><dock_state state="000000ff00000000fd0000000100000002000002460000020afc0100000002fc00000000000002460000000000fffffffaffffffff0100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000ffffffff0000011800ffffff000002460000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">INSERT INTO aerolineas (id_aerolinea, nombre_aerolinea) VALUES
+(1, 'Volaris'),
+(2, 'Aeromar'),
+(3, 'Interjet'),
+(4, 'Aeromexico');
+-- Insertar aeropuertos
+INSERT INTO aeropuertos (id_aeropuerto, nombre_aeropuerto) VALUES
+(1, 'Benito Juarez'),
+(2, 'Guanajuato'),
+(3, 'La Paz'),
+(4, 'Oaxaca');
+
+-- Insertar movimientos
+INSERT INTO movimientos (id_movimiento, descripcion) VALUES
+(1, 'Salida'),
+(2, 'Llegada');
+
+-- Insertar vuelos
+INSERT INTO vuelos (id_aerolinea, id_aeropuerto, id_movimiento, dia) VALUES
+(1, 1, 1, '2021-05-02'),
+(2, 1, 1, '2021-05-02'),
+(3, 2, 2, '2021-05-02'),
+(4, 3, 2, '2021-05-02'),
+(1, 3, 2, '2021-05-02'),
+(2, 1, 1, '2021-05-02'),
+(2, 3, 1, '2021-05-04'),
+(3, 4, 1, '2021-05-04'),
+(3, 4, 1, '2021-05-04');
+
+SELECT * FROM movimientos;
+</sql><sql name="&amp;Integrity Check*">PRAGMA integrity_check;</sql><current_tab id="1"/></tab_sql></sqlb_project>

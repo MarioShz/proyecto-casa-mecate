@@ -1,0 +1,112 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f0f2f5, #dfe3e8); /* Fondo degradado suave */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .App {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50; /* Color oscuro para el título */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #34495e; /* Color oscuro para subtítulos */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db; /* Línea decorativa */
+    padding-bottom: 5px;
+  }
+  
+  /* Estilos para las tablas */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento de bordes redondeados */
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .data-table th {
+    background-color: #3498db; /* Color de fondo para encabezados */
+    color: white;
+    font-weight: 600;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: #f8f9fa; /* Fondo alternado para filas */
+  }
+  
+  .data-table tr:hover {
+    background-color: #e9ecef; /* Efecto hover en filas */
+  }
+  
+  /* Estilos para enlaces */
+  a {
+    color: #3498db; /* Color azul para enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #2980b9; /* Color más oscuro al pasar el mouse */
+  }
+  
+  /* Estilos para imágenes */
+  img {
+    border-radius: 50%; /* Imágenes redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Estilos para botones (si los agregas) */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el mouse */
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Aplicar animación a las tablas */
+  .data-table {
+    animation: fadeIn 0.5s ease-in-out;
+  }

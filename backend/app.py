@@ -62,7 +62,7 @@ def process_data(data):
 def get_db_connection():
     try:
         conn = sqlite3.connect('database/flights.db')
-        conn.row_factory = sqlite3.Row  # Para que los resultados sean diccionarios
+        conn.row_factory = sqlite3.Row 
         return conn
     except sqlite3.Error as e:
         print(f"Error al conectar a la base de datos: {e}")

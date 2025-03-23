@@ -1,1 +1,27 @@
- 
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app  # Monta la carpeta backend en /app dentro del contenedor
+      - ./backend/database:/app/database  # Monta la carpeta de la base de datos
+    environment:
+      - FLASK_ENV=development
+      - SQLITE_DATABASE=/app/database/flights.db  # Ruta a la base de datos SQLite
+    command: flask run --host=0.0.0.0
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app  # Monta la carpeta frontend en /app dentro del contenedor
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Necesario para hot-reloading en Docker
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend  # El frontend depende del backend

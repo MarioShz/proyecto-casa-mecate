@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importa Link para la navegación
-import '../styles/home.css'; // Importa el archivo CSS de estilos
+import '../Styles/home.css'; // Importa el archivo CSS de estilos
 
 const Home = () => {
   return (

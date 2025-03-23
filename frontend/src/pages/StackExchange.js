@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/stackexchange.css'; // Importa los estilos
+import '../Styles/stackexchange.css'; // Importa los estilos
 
 const StackExchange = () => {
   const [stackData, setStackData] = useState(null);

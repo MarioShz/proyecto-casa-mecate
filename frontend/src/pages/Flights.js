@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Filters from '../components/Filters';
 
 const Flights = () => {
   const [aeropuertoMayorMovimiento, setAeropuertoMayorMovimiento] = useState(null);
